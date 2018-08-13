@@ -82,7 +82,7 @@ namespace SmtpTest
 
             while ( ( bytes = socket.Receive(buffer, 0, 1024, SocketFlags.None) ) > 0  )
             {
-                string translated = System.Text.Encoding.Unicode.GetString(buffer, 0, bytes);
+                string translated = System.Text.Encoding.ASCII.GetString(buffer, 0, bytes);
                 response.Append(response);
             }
 
